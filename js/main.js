@@ -46,23 +46,25 @@ class Person{
         this.name = name;
         this.age = age;
     }
-    printInfo = () => `Name: ${this.name} \nAge: ${this.age}`
+    printInfo = () => {console.log(`Name: ${this.name} \nAge: ${this.age}`)}
 
-    increaseAge = () => this.age += 1;
+    increaseAge = () => {this.age += 1;}
+    increaseThree = () => {this.age += 3}
 
 }
 
 
 
 let john = new Person('John', 30)
-console.log(john.printInfo())
-john.increaseAge();
-john.increaseAge();
-john.increaseAge();
+john.printInfo()
+console.log(john.increaseAge())
+john.printInfo()
 
 let grace = new Person('Grace', 25)
-console.log(grace.printInfo())
-grace.increaseAge();
+grace.printInfo()
+console.log(grace.increaseThree())
+grace.printInfo()
+
 // Create our Person Prototype
 
 
